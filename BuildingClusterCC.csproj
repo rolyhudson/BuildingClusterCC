@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{778CACE4-E2FA-4C0E-A1FF-2DBA4540CD48}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BuildingClusterCC</RootNamespace>
+    <AssemblyName>BuildingClusterCC</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>packages\Accord.3.8.0\lib\net462\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.MachineLearning, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>packages\Accord.MachineLearning.3.8.0\lib\net462\Accord.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>packages\Accord.Math.3.8.0\lib\net462\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math.Core, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>packages\Accord.Math.3.8.0\lib\net462\Accord.Math.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>packages\Accord.Statistics.3.8.0\lib\net462\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="Adapter_oM">
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\Adapter_oM.dll</HintPath>
+    </Reference>
+    <Reference Include="BHoM">
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\BHoM.dll</HintPath>
+    </Reference>
+    <Reference Include="BHoM_Adapter">
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\BHoM_Adapter.dll</HintPath>
+    </Reference>
+    <Reference Include="BHoM_Engine">
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\BHoM_Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Data_Engine, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\Data_Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Data_oM">
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\Data_oM.dll</HintPath>
+    </Reference>
+    <Reference Include="Dimensional_oM, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Geometry_Engine, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\Geometry_Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Geometry_oM, Version=7.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Geospatial_Engine">
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\Geospatial_Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Geospatial_oM">
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\Geospatial_oM.dll</HintPath>
+    </Reference>
+    <Reference Include="HTTP_Adapter">
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\HTTP_Adapter.dll</HintPath>
+    </Reference>
+    <Reference Include="HTTP_Engine">
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\HTTP_Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="HTTP_oM">
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\HTTP_oM.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenStreetMap_Adapter">
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\OpenStreetMap_Adapter.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenStreetMap_Engine">
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\OpenStreetMap_Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenStreetMap_oM">
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\OpenStreetMap_oM.dll</HintPath>
+    </Reference>
+    <Reference Include="Serialiser_Engine, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\Serialiser_Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildingsAroundNode.cs" />
+    <Compile Include="CombineJsonL.cs" />
+    <Compile Include="FindClusters.cs" />
+    <Compile Include="ReadBuildingCentroids.cs" />
+    <Compile Include="PlaceNodes.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadNodes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('packages\Accord.3.8.0\build\Accord.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Accord.3.8.0\build\Accord.targets'))" />
+  </Target>
+</Project>
